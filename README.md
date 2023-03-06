@@ -36,6 +36,8 @@ This project leverages python 3.9 and Jupyter Lab with the following packages:
 * `Python 3.9`
 * `Jupyter lab`
 
+* [dataframe_image](https://pypi.org/project/dataframe-image/) - A package to convert Jupyter Notebooks to PDF and/or Markdown embedding pandas DataFrames as images.
+
 * [JupyterLab](https://jupyter.org/) - Jupyter Lab is the latest web-based interactive development environment for notebooks, code, and data.
 
 * [Path](https://docs.python.org/3/library/pathlib.html) - This module offers classes representing filesystem paths with semantics appropriate for different operating systems.
@@ -72,6 +74,7 @@ This project leverages python 3.9 and Jupyter Lab with the following packages:
     pip install numpy
     pip install --upgrade tensorflow
     pip install -U scikit-learn
+    pip install dataframe_image
  ```
 #### Step3: Start Jupyter Lab
 Jupyter Lab can be started by:
