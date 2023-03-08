@@ -113,3 +113,12 @@ MIT
 ---
 
 ## Baseline Performance
+
+
+
+![svm_class_report_3m_training_data_SMAFast_4_SMASlow_100.jpg](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_4_SMASlow_100.jpg)
+
+![svm_plot_3M_training_and_SMAFast_4_SMASlow_100.png](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_3M_training_and_SMAFast_4_SMASlow_100.png)
+
+
+
