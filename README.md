@@ -33,28 +33,23 @@ This project leverages python 3.9 and Jupyter Lab with the following packages:
 * `Python 3.9`
 * `Jupyter lab`
 
-* [dataframe_image](https://pypi.org/project/dataframe-image/) - A package to convert Jupyter Notebooks to PDF and/or Markdown embedding pandas DataFrames as images.
-
 * [JupyterLab](https://jupyter.org/) - Jupyter Lab is the latest web-based interactive development environment for notebooks, code, and data.
 
 * [Path](https://docs.python.org/3/library/pathlib.html) - This module offers classes representing filesystem paths with semantics appropriate for different operating systems.
 
 * [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) - Pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
 
-* [concat](https://pandas.pydata.org/docs/reference/api/pandas.concat.html) - Concatenate pandas objects along a particular axis
-
 * [numpy](https://numpy.org/doc/stable/index.html) - NumPy is the fundamental package for scientific computing in Python.
 
 * [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) - Standardization of a dataset is a common requirement for many machine learning estimators: they might behave badly if the individual features do not more or less look like standard normally distributed data (e.g. Gaussian with 0 mean and unit variance).
 
-* [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html) - The input to this transformer should be an array-like of integers or strings, denoting the values taken on by categorical (discrete) features. This creates a binary column for each category and returns a sparse matrix or dense array (depending on the sparse_output parameter)
+* [sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) - SVC is a class capable of performing binary and multi-class classification on a dataset.
 
-* [train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) - Split arrays or matrices into random train and test subsets.
+* [LinearRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) - Ordinary least squares Linear Regression.
 
-* [Dense](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense) - Dense implements the operation: output = activation(dot(input, kernel) + bias) where activation is the element-wise activation function passed as the activation argument, kernel is a weights matrix created by the layer, and bias is a bias vector created by the layer (only applicable if use_bias is True).
+* [hvplot](https://hvplot.holoviz.org/) - A familiar and high-level API for data exploration and visualization
 
-* [Sequential](https://www.tensorflow.org/guide/keras/sequential_model) - A Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor.
-
+* [classification_report](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html) - Build a text report showing the main classification metrics.
 ---
 
 ## Installation Guide
@@ -69,9 +64,8 @@ This project leverages python 3.9 and Jupyter Lab with the following packages:
 ```python
     pip install pandas
     pip install numpy
-    pip install --upgrade tensorflow
     pip install -U scikit-learn
-    pip install dataframe_image
+
  ```
 #### Step3: Start Jupyter Lab
 Jupyter Lab can be started by:
@@ -87,26 +81,22 @@ To use the venture funding with deep learning jupyter lab notebook, simply clone
 
 The tool will go through the following steps:
 
-### Prepare the data for use on a neural network model.
-* Import of data to analyze
-* Review the DataFrame, looking for categorical variables that will need to be encoded, as well as columns that could eventually define features and target variables.
-* Encode the dataset’s categorical variables using OneHotEncoder, and then place the encoded variables into a new DataFrame. 
-* Add the original DataFrame’s numerical variables to the DataFrame containing the encoded variables.
-* Using the preprocessed data, create the features (X) and target (y) datasets.
-* Split the features and target sets into training and testing datasets.
-* Use scikit-learn's StandardScaler to scale the features data.
+### Establish a Baseline Perfomance
+* import of data to analyze
+* generate trading signals using short- and long-window SMA values
+* split the data into training and testing datasets
+* review classification report associated with the SVC model predictions
+* create a predictions dataframe
+* create a cumulative return plot that shows the actual returns vs the strategy returns
 
-### Compile and evaluate a binary classification model using a neural network.
-* Create a deep neural network by assigning the number of input features, the number of layers, and the number of neurons on each layer using Tensorflow’s Keras.
-* Compile and fit the model using the binary_crossentropy loss function, the adam optimizer, and the accuracy evaluation metric.
-* Evaluate the model using the test data to determine the model’s loss and accuracy.
-* Save and export your model to an HDF5 file
+### Tune the baseline Trading Algorithm
+* tune the training algorithm by adjusting the size of the training dataset
+* tune the trading algorithm by adjusting the SMA input features.
 
-### Optimize the neural network model.
-* Define three new deep neural network models (resulting in the original plus 3 optimization attempts). With each, try to improve on your first model’s predictive accuracy.
-* Excecuted model with removing 1 of the columns every run, to see if there are any columns that have limited impact on the model
-* Add an additional hidden layer and run the model with different amounts of hidden nodes and evaluate the results
-* Change activation functions for the hidden layers and change the number of epoch in the training regimen and evaluate the results. 
+### Evaluate a new machine learning classifier
+* import a new classifier
+* using the original training data as the baseline model, fit another model with the new classifier.
+* backtest the new model to evaluate its performance.
 
 ## Contributor(s)
 
@@ -117,3 +107,9 @@ This project was created by Niels de Haan (nlsdhn@gmail.com)
 ## License(s)
 
 MIT
+
+---
+# Evalution Report
+---
+
+## Baseline Performance
