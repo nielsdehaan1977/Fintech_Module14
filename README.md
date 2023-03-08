@@ -116,7 +116,7 @@ MIT
 
 The baseline strategy performance was not impressive with a loss of about 30% based on historical data used.
 
-![Baseline_Strategy_returns.jpg]((https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/Baseline_Strategy_returns.jpg)
+![Baseline_Strategy_returns.jpg](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/Baseline_Strategy_returns.jpg)
 
 
 
