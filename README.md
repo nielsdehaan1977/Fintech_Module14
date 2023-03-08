@@ -15,7 +15,7 @@ The tool can help to create and to test algorithmic trading strategies.
 1. Establish a Baseline Performance
 2. Tune the Baseline Trading Algorithm
 3. Evaluate a new machine learning classifier
-4. Help to create an evaluation report
+4. Create an evaluation report
 ---
 ## Table of Content
 
@@ -113,6 +113,11 @@ MIT
 ---
 
 ## Baseline Performance
+
+The baseline strategy performance was not impressive with a loss of about 30% based on historical data used.
+
+![Baseline_Strategy_returns.jpg]((https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/Baseline_Strategy_returns.jpg)
+
 
 
 
