@@ -1,24 +1,21 @@
 # Fintech_Module14
 
-![startup.jpg](https://github.com/nielsdehaan1977/Fintech_Module13/blob/main/Images/startup.jpg)
+![algo_trading.jpg](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/algo_trading.jpg)
 ---
 # Algorithmic Trading 
 ---
-## This jupyter notebook can be used as a template to create a binary classifier model that can to a certain degree predict whether an applicant will become a successful business. The model utilizes TensorFlow library to design a binary classification deep neural network model. This model use a dataset’s that contains information of more than 34,000 startup organizations and tries to predict whether a startup will be successful based on the features in the dataset. The notebook takes into consideration the number of inputs before determining the number of layers that the model will contain or the number of neurons on each layer. Then it compiles and fits the model and evaluates the binary classification model by calculating the model’s loss and accuracy.
+## This jupyter notebook can be used as a template to create and test algorithmic trading strategies. 
 
-
-![Neural_Networks_2.jpg](https://github.com/nielsdehaan1977/Fintech_Module13/blob/main/Images/Neural_Networks_2.jpg)
-
+## machine_learning_trading_bot.ipynb
 ---
-## venture_funding_with_deep_learning.ipynb
+### This notebook can be used as a template to build a algorithmic trading model. The notebook starts off with creating a baseline perfomance and shows examples how to tune the baseline trading algorithm. And lastly it also evaluates a different machine learning classifier. 
 ---
-### This notebook can be used as a template to build a model that can be used to predict whether a startup loan applicant will become a succesful business based upon a binary classification model. 
----
-The tool can help to predict if a startup will become a succesful business. 
+The tool can help to create and to test algorithmic trading strategies.
 * The tool goes through on the following steps: 
-1. Prepare the data for use on a neural network model.
-2. Compile and evaluate a binary classification model using a neural network.
-3. Optimize the neural network model.
+1. Establish a Baseline Performance
+2. Tune the Baseline Trading Algorithm
+3. Evaluate a new machine learning classifier
+4. Help to create an evaluation report
 ---
 ## Table of Content
 
