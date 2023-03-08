@@ -114,16 +114,40 @@ MIT
 
 ## Baseline Performance
 
-The baseline strategy performance was not impressive with a loss of about 30% based on historical data used.
+The baseline strategy performance was not impressive with a loss of about 30% based on historical data used. Strategy was based on generatinge trading signals using short- and long-window SMA values. Baseline SMA values were 4 periods for the short sma and 100 periods for the long sma. Strategy signals were set to 1 if return was equal or larger than 0 and -1 if return was smaller than 0. 
 
 ![Baseline_Strategy_returns.jpg](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/Baseline_Strategy_returns.jpg)
 
+---
+
+## Tune Baseline Trading Algorithm
+
+While trying to improve the results of the baseline strategy, we adjusted the model's input features to find the parameters that result in better trading outcomes.
+The following parameters were changed and the results are below:
 
 
 
-![svm_class_report_3m_training_data_SMAFast_4_SMASlow_100.jpg](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_4_SMASlow_100.jpg)
 
-![svm_plot_3M_training_and_SMAFast_4_SMASlow_100.png](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_3M_training_and_SMAFast_4_SMASlow_100.png)
+1. adjusting the training window from 3 months to 6 months
+---
+![Image_of_3m_class](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_4_SMASlow_100.jpg)  ![Image_of_6m_class](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_6m_training_data_SMAFast_4_SMASlow_100.jpg)
 
+![Image_of_3m_training](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_3M_training_and_SMAFast_4_SMASlow_100.png)
 
+![Image_of_6m_training](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_6M_training_and_SMAFast_4_SMASlow_100.png)
+
+---
+2. adjusting the SMA input features 
+---
+2a. adjusting SMA short to 2 and SMA long to 50
+
+![Image_of_3m_class_2_50](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_2_SMASlow_50.jpg)
+![Image_of_3m_SMAFast_2_SMASlow_50](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_3M_training_and_SMAFast_2_SMASlow_50.png)
+---
+2b. adjusting SMA short to 1 and SMA long to 25
+
+![Image_of_3m_class_1_25](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_1_SMASlow_25.jpg)
+![Image_of_3m_SMAFast_1_SMASlow_25](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_3M_training_and_SMAFast_1_SMASlow_25.png)
+
+---
 
