@@ -125,7 +125,15 @@ The baseline strategy performance was not impressive with a loss of about 30% ba
 While trying to improve the results of the baseline strategy, we adjusted the model's input features to find the parameters that result in better trading outcomes.
 The following parameters were changed and the results are below:
 
+The SVM model with 3M of training data and SMA_short at 4 periods and SMA_long at 100 periods for the most part of 2019 and 2020 performed better than the actual returns. Also when changing the amount of training data to 6M the strategy ultimately outperforms the actual returns. For the model with 6M training data the actual returns outperform the strategy returns for most of 2019, but outperforms the actual returns from March 2020 onwards. With a total return of about 80% whereas the model with 3M training data "only" produces about 50% return. 
+
 1. adjusting the training window from 3 months to 6 months
+
+While changing the training window from 3m to 6m:
+* accuracy of the model increased by 1 point from  0.55 to 0.56. 
+* Precision for -1 increased by 1 point from 0.43 to 0.44
+* Recall for -1 decreased from 0.04 to 0.02
+
 ---
 ![Image_of_3m_class](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_4_SMASlow_100.jpg)  ![Image_of_6m_class](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_6m_training_data_SMAFast_4_SMASlow_100.jpg)
 
@@ -138,11 +146,21 @@ The following parameters were changed and the results are below:
 ---
 2a. adjusting SMA short to 2 and SMA long to 50
 
+While changing the SMA window to 2 and 50:
+* accuracy of the model decreased by 1 point from  0.55 to 0.54. 
+* Precision for -1 decreased by 4 points from 0.43 to 0.39
+* Recall for -1 increased from 0.04 to 0.07
+
 ![Image_of_3m_class_2_50](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_2_SMASlow_50.jpg)
 ![Image_of_3m_SMAFast_2_SMASlow_50](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_3M_training_and_SMAFast_2_SMASlow_50.png)
 
 ---
 2b. adjusting SMA short to 1 and SMA long to 25
+
+While changing the SMA window to 1 and 25:
+* accuracy of the model decreased by 1 point from  0.55 to 0.54. 
+* Precision for -1 decreased by 1 points from 0.43 to 0.42
+* Recall for -1 increased from 0.04 to 0.13
 
 ![Image_of_3m_class_1_25](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_class_report_3m_training_data_SMAFast_1_SMASlow_25.jpg)
 ![Image_of_3m_SMAFast_1_SMASlow_25](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/svm_plot_3M_training_and_SMAFast_1_SMASlow_25.png)
@@ -153,6 +171,11 @@ The following parameters were changed and the results are below:
 
 For the evaluation of how a different machine learning classifier would perform compared to the provided baseline model, the logistic regression model was used for the comparison. and the model was ran with 3M of training data and SMA_short of 1 period and SMA_long of 25
 
+While changing the SVM model to Logistic Regression Model (SMA 1 and 25):
+* accuracy of the model was the same at 0.54. 
+* Precision for -1 increased by 1 points from 0.42 to 0.43
+* Recall for -1 increased from 0.13 to 0.16
 
 ![lr_class_report_3m_training_data_SMAFast_1_SMASlow_25.jpg](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/lr_class_report_3m_training_data_SMAFast_1_SMASlow_25.jpg)
 ![lr_plot_3M_training_and_SMAFast_1_SMASlow_25.png](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/lr_plot_3M_training_and_SMAFast_1_SMASlow_25.png)
+
