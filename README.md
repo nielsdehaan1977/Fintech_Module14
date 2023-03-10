@@ -179,3 +179,4 @@ While changing the SVM model to Logistic Regression Model (SMA 1 and 25):
 ![lr_class_report_3m_training_data_SMAFast_1_SMASlow_25.jpg](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/lr_class_report_3m_training_data_SMAFast_1_SMASlow_25.jpg)
 ![lr_plot_3M_training_and_SMAFast_1_SMASlow_25.png](https://github.com/nielsdehaan1977/Fintech_Module14/blob/main/Images/lr_plot_3M_training_and_SMAFast_1_SMASlow_25.png)
 
+Based on the above evaluation methods, the model as is does not seem to have very good predictive capacities. All the changes to the orginal model did not have a very big impact overall, unfortunately the changes did not result in significant impovements. We cannot recommend using the model as is for algorithmic trading purposes. 
